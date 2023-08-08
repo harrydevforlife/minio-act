@@ -17,7 +17,7 @@ pip3 install minio-act
 ```sh
 $ git clone https://github.com/trancongtuanmanh/minio-act
 $ cd minio-act
-python setup.py install
+$ python setup.py install
 ```
 
 ## Quick Start Example - File Uploader
@@ -50,7 +50,7 @@ minio_src.create_bucket(
 )
 ```
 
-#### Run File Uploader
+#### Run File Create Bucket
 ```sh
 $ python3 examples/bucket/create.py
 2023-08-09 00:07:41,848 - Minio Client - INFO - Creating bucket minio-bk ...
