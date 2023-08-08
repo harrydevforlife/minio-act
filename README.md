@@ -15,8 +15,8 @@ pip3 install minio-act
 ## Download source
 
 ```sh
-git clone https://github.com/trancongtuanmanh/minio-act
-cd minio-act
+$ git clone https://github.com/trancongtuanmanh/minio-act
+$ cd minio-act
 python setup.py install
 ```
 
