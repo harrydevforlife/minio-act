@@ -1,0 +1,1 @@
+from fixtures.connection import minio_connection
