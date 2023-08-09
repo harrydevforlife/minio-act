@@ -9,7 +9,7 @@ Python 3.7 or higher.
 ## Download using pip
 
 ```sh
-pip3 install minio-act
+$ pip3 install minio-act
 ```
 
 ## Download source
@@ -34,6 +34,8 @@ You need the following items to connect to an S3-compatible object storage serve
 
 ### examples/bucket/create.py
 ```py
+# create.py
+
 import os
 
 from minio_act.client import MinioClient
@@ -55,6 +57,32 @@ minio_src.create_bucket(
 $ python3 examples/bucket/create.py
 2023-08-09 00:07:41,848 - Minio Client - INFO - Creating bucket minio-bk ...
 ```
+
+### examples/bucket/download.py
+```py
+# download.py
+
+import os
+
+from minio_act.client import MinioClient
+
+minio_src = MinioClient(
+    endpoint=os.getenv("AWS_S3_ENDPOINT"),
+    access_key=os.getenv("AWS_ACCESS_KEY"),
+    secret_key=os.getenv("AWS_SECRET_KEY"),
+    secure=False
+)
+minio_src.download_bucket(
+    bucket_name="minio-bk"
+)
+```
+
+#### Run File Download Bucket
+```sh
+$ python3 examples/bucket/download.py
+2023-08-09 00:07:41,848 - Minio Client - INFO - Downloading bucket minio-bk ...
+```
+
 
 ## More References
 * [Python Client API Reference](https://min.io/docs/minio/linux/developers/python/API.html)
