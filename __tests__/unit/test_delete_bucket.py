@@ -6,11 +6,10 @@ import pytest
 def prepare_bucket(minio_connection):
     minio_connection.create_bucket(
         bucket_name="minio-act-testing",
-        region="ap-southeast-1"
+        region="us-east-1"
     )
     yield minio_connection
 
-@pytest.mark.skip(reason="Not Implemented")
 @pytest.mark.usefixtures("prepare_bucket")
 def test_create_bucket(prepare_bucket):
     prepare_bucket.delete_bucket(
