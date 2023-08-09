@@ -6,7 +6,6 @@ minio_src = MinioClient(
     secret_key="zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG",
     secure=False
 )
-minio_src.create_bucket(
-    bucket_name="minio-bk",
-    region="ap-southeast-1"
+minio_src.download_bucket(
+    bucket_name="minio-bk"
 )
