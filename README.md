@@ -36,14 +36,12 @@ You need the following items to connect to an S3-compatible object storage serve
 ```py
 # create.py
 
-import os
-
 from minio_act.client import MinioClient
 
 minio_src = MinioClient(
-    endpoint=os.getenv("AWS_S3_ENDPOINT"),
-    access_key=os.getenv("AWS_ACCESS_KEY"),
-    secret_key=os.getenv("AWS_SECRET_KEY"),
+    endpoint="play.min.io",
+    access_key="Q3AM3UQ867SPQQA43P2F",
+    secret_key="zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG",
     secure=False
 )
 minio_src.create_bucket(
@@ -62,14 +60,12 @@ $ python3 examples/bucket/create.py
 ```py
 # download.py
 
-import os
-
 from minio_act.client import MinioClient
 
 minio_src = MinioClient(
-    endpoint=os.getenv("AWS_S3_ENDPOINT"),
-    access_key=os.getenv("AWS_ACCESS_KEY"),
-    secret_key=os.getenv("AWS_SECRET_KEY"),
+    endpoint="play.min.io",
+    access_key="Q3AM3UQ867SPQQA43P2F",
+    secret_key="zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG",
     secure=False
 )
 minio_src.download_bucket(
